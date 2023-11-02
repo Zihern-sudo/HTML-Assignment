@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+
+body{
+    background-image:url(body_background.jpg);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+body > header img {
+  width: 100%;
+  height: auto;
+}
+
+.cusReview{
+  display: block;
+  border:3px solid green ;
+  text-align: center;
+  width:700px;
+  margin:20px auto;
+}
+.container{
+  display: block;
+  padding:20px;
+  margin-bottom: 10px;
+  border-top: 3px solid silver;
+}
+.container .img{
+  display: flex;
+
+}
+.container .word{
+  font-size: 18px;
+  display: block;
+  border: 2px solid black;
+  margin: 10px;
+  width:900px;
+}
+
+.circle{
+  padding-right:100px;
+  display: block;
+  border:8px solid rgb(10, 10, 232);
+  border-radius:50%;
+  overflow:hidden;
+  height: 250px;
+  width:190px;
+  margin-top:5px;
+  margin-bottom:5px;
+  margin-left:5px;
+  size:fixed;
+}
+
+.star{
+  width: 400px;
+  margin-bottom:0px;
+  font-size:40px;
+  color:yellow;
+  margin-top:1px;
+  margin-left:10px;
+}
+
+.nameArtist a{
+  margin: 10px;
+  align-items: left;
+  font-size: 30px;
+  border-bottom: 2px solid black;
+  color: blueviolet;
+  text-shadow:rgba(0,0,0,1)1px -1px 1px;
+  transform: scale(1,1) translateY(0px);
+  transition: all 0.5s linear;
+  text-decoration: none;
+}
+.nameArtist a:hover{
+  color:blueviolet;
+  text-shadow:blueviolet 0px 15px 4px;
+  transform: scale(2,2) translateY(-15px);
+}
+
+.paragraph{
+  display: flex;
+  display: block;
+  padding:10px;
+  text-align: justify; 
+}
+
+.jobs{
+  font-size:19px;
+  color:blueviolet;
+  text-transform: capitalize;
+}

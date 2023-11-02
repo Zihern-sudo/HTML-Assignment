@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+html {
+   text-align: center;
+   background-image: url(img-br.jpg) ;
+   background-size: 100%;
+   background-attachment:fixed;
+   max-width: 1024px;
+   min-width: 640px;
+   margin: 60px auto;
+}
+
+body {
+   margin: 60px auto;
+   width: 100%;
+   max-width: 1024px;
+   min-width: 640px; 
+}
+header > div > nav.bar {
+   margin-top: 0px;
+   margin-right: 20px;
+   float: left;
+   border: 1px none;
+   width: 200px;
+   text-align: justify;
+   line-height: 1em;
+}
+
+body > header img {
+   width: 100%;
+   height: auto;
+}
+
+
+body > section.Event_News {
+  margin-right: 15px;
+
+}
+
+
+div#Air_Force, div#Air_Jordan, div#Air_Max, div#Go_Fly, div#Air_Mag {
+   display: inline-block;
+   margin: 10px;
+   height: 270px;
+}
+
+div#Air_Force > p#shoes_name, div#Air_Jordan > p#shoes_name, div#Air_Max > p#shoes_name {
+   margin: 10px;
+}
+
+
+
+
+/* Adidas */
+
+div#Yeezy, div#Stan_Smith, div#_4DFWD, div#Ultraboost, div#Superstar {
+   display: inline-block;
+   margin: 10px;
+   height: 270px;
+}
+
+div#Yeezy > p#shoes_name, div#Stan_Smith > p#shoes_name, div#_4DFWD > p#shoes_name {
+   margin: 10px;
+}
+
+
+div#Yeezy > div > img, div#Stan_Smith > div > img, div#_4DFWD > div > img {
+   margin-top: 30px;
+}
+
+
+ /* PUMA */
+ 
+div#Mirage, div#Suede_50, div#Classic, div#Lamelo_Ball, div#Running_Shoes {
+   display: inline-block;
+   margin: 10px;
+   height: 270px;
+}
+
+div#Mirage > p#shoes_name, div#Suede_50 > p#shoes_name, div#Classic > p#shoes_name {
+   margin: 10px;
+}
+
+
+div#Mirage > div > img, div#Suede_50 > div > img, div#Classic > div > img {
+   margin-top: 30px;
+}

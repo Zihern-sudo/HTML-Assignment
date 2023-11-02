@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Membership</title>
+        <link rel="icon" href="Tar_logo.Ver2-3.7.ico" type="icon">
+        <link rel="stylesheet" href="Shoes_layout.css">
+        <link href="membership.css" rel="stylesheet"/>
+        
+        
+<script>
+
+function myfunction(){
+var username=document.getElementById("username").value;
+var userpassword=document.getElementById("userpassword").value;
+
+let user=username
+let password=userpassword
+if(user== user&& password==password)
+{
+    alert("Loging in...");
+    return true;
+}else
+    alert("Fail to login");
+    return false;
+
+
+}
+        </script>
+        
+        
+        
+    </head>
+        <body>
+<div class="sign-form">
+    <img src="loginuser.png" alt="" class="signup-user"/>
+    <h1><a href="mem.html">Membership</a></h1>
+    <form action="payment.html" method="get">
+        <input type="text" class="input-box" placeholder="Enter your User Name" id="username" required/>
+
+        <input type="password" class="input-box" placeholder="Enter your Password" id="userpassword" required/>
+
+            <input  type="submit" name="" value="Login" onclick="myfunction()"/>
+            <input  type="reset"  value="Cancel"/>
+           </div>
+    </form>
+</div>
+        </body>
+</html>

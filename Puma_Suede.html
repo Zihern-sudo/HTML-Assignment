@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Puma Suede Classic Trainers</title>
+    <link rel="icon" href="Tar_logo.Ver2-3.7.ico" type="icon">
+    <link rel="stylesheet" href="product_page.css">
+
+</head>
+<body>
+    <header>
+        <img src="Tar_logo.Ver2-3.png" alt="Title Map" usemap="#BigTitle">
+       <map name="BigTitle">
+       <area shape="circle" coords="886,140,19" href="https://www.instagram.com/taruc_official/?hl=en" alt="IG" target="_blank">
+       <area shape="circle" coords="936,139,19" href="https://www.facebook.com/tunkuabdulrahmanuniversitycollege/" alt="FB" target="_blank">
+       <area shape="circle" coords="989,139,20" href="https://twitter.com/KlTaruc?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" alt="Twitter" target="_blank">
+        
+       </map>
+    </header>
+
+<div>
+    <button class="back"><a href="Product list.html">Back</a></button>
+</div>
+
+<div class="main_box">
+
+<div class="slide_box">
+
+<div class="slide_border">
+
+<div class="slides fade">
+  <img src="Puma Suede.png" style="width:100%">
+</div>
+
+<div class="slides fade">
+  <img src="Puma Suede 2.png" style="width:100%">
+</div>
+
+<div class="slides fade">
+  <img src="Puma Suede_Close up.png" style="width:100%">
+</div>
+
+<div class="slides fade">
+    <img src="Puma Suede_Shoe base.png" style="width:100%">
+</div>
+
+<div class="buttons">
+  <button onclick="plusSlides(-1)" id="prec">❮</button>
+  <button onclick="plusSlides(1)" id="next">❯</button>
+</div>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span>
+</div>
+</div>
+</div>
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("slides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<div class="infor_box">
+    <h2 class="shoes_name">Puma Suede Classic Trainers</h2>
+    <p class="dcrpt">
+        Colour: Black
+        <br>
+        Size: UK 3 - 15
+        <br>
+        Stock: 11
+        <br>
+        Sold: 27
+    </p>
+    <p class="price"><s>RM299.99</s></p>
+    <p class="new_price">RM169.99</p>
+    
+    <button class="buy_now"><a href="membership.html">Buy Now</a></button>
+</div>
+</div>
+
+
+
+<footer>
+    <p id="infor">&#9742 Hot Line:<a href="tel:+601159737500"> +601159737500</a> &nbsp; WhatsApp: <a href="tel:+601110825618">+601110825618</a> &nbsp; Email: <a href="mailto:linjz-wm22@student.tarc.edu.my">linjz-wm22@student.tarc.edu.my</a></p>
+    <p id="right"><span style="color: rgb(255, 255, 0);">TAR's Shoes Outlet</span> © 2022 All Rights Reserved Disclaimer Privacy Policy and ABAC Policy</p>
+ </footer>
+</body>
+</html>

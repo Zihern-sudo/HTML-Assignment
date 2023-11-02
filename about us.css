@@ -1,0 +1,150 @@
+@charset "utf-8";
+
+body{
+    background-image:url(body_background.jpg);
+    box-sizing: border-box;
+    background-color: white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 50px 50px 0 0;
+}
+
+header {
+    background-color: transparent;
+}
+
+
+
+.about_section{
+    font-size: 18px;
+    line-height: 2em;
+    margin: 15px auto;
+    border-bottom: 3px solid silver;
+}
+
+.phy_section{
+    font-size: 18px;
+    line-height: 2em;
+    margin: 10px auto;
+    border-bottom: 3px solid silver;
+}
+
+.phy_section h2 {
+    font-size: 24pt;
+}
+
+.aboutus {
+    margin: 20px auto;
+    border: 2px solid #2b9ec2;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30pt;
+    background-color:#2b9ec2;
+    color:rgb(255, 255, 255);
+    letter-spacing: 1.5px;
+}
+
+.aboutus h1{
+    vertical-align: center;
+    line-height: 20px;
+    color:white;
+    
+}
+
+/* Time .table */
+
+
+.time_table{
+    border-collapse: collapse;
+    margin:25px auto;
+    width: 90%;
+    font-size:10pt;
+    text-align: center;
+}
+
+#time_heading {
+    font-size: 20pt;
+}
+
+.time_table thead tr{
+    color:rgb(0, 0, 0);
+    text-align:center;
+}
+.time_table,.time_table td{
+    padding:12px 15px;
+}
+
+.time_period {
+    width: 80px;
+}
+
+.time_table tbody tr{
+    border-bottom:1px solid #dddd;
+}
+.time_table tbody tr:nth-of-type(even){
+background-color: #f3f3f3;
+}
+
+#week_days {
+    font-size: 16pt;
+    padding: 15px;
+}
+
+p{  
+    line-height: 1.4em;
+    margin: 8px;
+}
+.p1{
+    font-size:18px;
+    text-align: justify;
+    padding-right: 5px;
+    
+}
+
+#store_map {
+    margin: 15px auto;
+}
+
+
+#paragraph2{
+    font-size:20px;
+}
+
+.img{
+    margin-left:10px;
+    margin-right:20px;
+    float:left;
+
+    display:block;
+    border-radius: 10px;
+}
+
+/* read more */
+.read_more{
+    margin: 10px auto;
+}
+.read_more a:link, .read_more a:visited{
+    color:blueviolet;
+    text-decoration :none;
+    background-color:hsla(0,0%,42%,0.4);
+    border-radius:50px;
+    padding:10px;
+ }
+    
+ .read_more a:hover, .read_more a:active{
+    color:hsla(0,0%,100%,0.7);
+    background-color:hsla(0,0%,42%,0.7);
+    text-decoration:underline;
+ }
+
+.fistWord{
+    font-size:25px;
+}
+.fistLetter{
+font-size: 40px;
+color:purple;    
+}
+
+
+/*.time_table*/
+
+ 

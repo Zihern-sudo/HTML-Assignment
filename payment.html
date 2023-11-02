@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Payment</title>
+    <link rel="icon" href="Tar_logo.Ver2-3.7.ico" type="icon">
+    <link href="payment.css" rel="stylesheet"/>
+
+
+
+<script>
+
+    function startform(){
+  document.getElementById('date').value= todaydate();
+  document.order.product.focus();
+}
+
+function todaydate() {
+    var Today=new Date();
+    return Today.getDate()+"/"+ (Today.getMonth()+1) + "/" +Today.getFullYear();
+  }
+
+  function order_price(){
+item_value=document.order.product.value;                          
+qty_ordered=document.order.qty.selectedIndex;                    
+itemorderedprice=item_value*qty_ordered;
+tax=item_value*qty_ordered*0.08;
+document.order.subtotal1.value=itemorderedprice.toFixed(2);
+document.order.percenttax.value=tax.toFixed(2);
+total_price();
+}
+
+function shipping_price(){
+if(document.order.shipping[0].checked)
+	{document.order.shippingtax.value="8.10";}
+else if(document.order.shipping[1].checked)
+	{document.order.shippingtax.value="10.10";}
+else if(document.order.shipping[2].checked)
+{document.order.shippingtax.value="12.95";}
+else{document.order.shippingtax.value="14.00";}
+  total_price();
+}
+
+function total_price(){
+s1=parseFloat(document.order.subtotal1.value);
+s2=parseFloat(document.order.percenttax.value);
+s3=parseFloat(document.order.shippingtax.value);
+
+total=s1+s2+s3;
+document.order.total.value=total.toFixed(2);
+}
+
+
+function checkingtheform(){
+ product_yes=true;
+ if (document.order.subtotal1.value=="0.00")product_yes=false;
+ if (document.order.percenttax.value=="0.00")product_yes=false;
+ if (document.order.shippingtax.value=="0.00")product_yes=false;
+
+
+month_yes=true;
+ if (document.order.month.value=="0")   month_yes=false;
+
+ form_yes=(product_yes&&month_yes);
+ if(form_yes){
+   alert("Your order has been submitted");}
+ else { 
+ 	if(product_yes==false)  alert("Select a product, quantity and shipping method");
+ 	if(month_yes==false) alert("Selct a valid month "); 	
+ }
+
+ return form_ok;
+}
+</script>
+</head>
+
+<body onload="startform()">
+
+    <form name="order" method="get" onsubmit="return checkingtheform()" action="feedback_html.html">
+
+    <div class="order">
+
+        <h1 id="order_heading">Order</h1>
+    
+    <div class="product_infor">
+    Select Product :
+    <select name="product" onchange="order_price()">
+        <option value="0">Products from Tarc's Shoe Store</option>
+        <option value="1300">Nike Air Force 1 RM 1300</option>
+        <option value="470">Nike Air Jordan 1 RM 470</option>
+        <option value="590">Nike Air Max Flyknit Racer RM 590</option>
+        <option value="470">Nike Go Fly Ease RM 470</option>
+        <option value="1300">Nike MAG Back to the Future RM 1300</option>
+
+        <option value="300">Stan Smith Shoes RM 300</option>
+        <option value="360">Superstar Shoes RM 360</option>
+        <option value="730">UltraBoost 22 Shoes RM 730</option>
+        <option value="600">ADIDAS 4DFWD 2 RM 600</option>
+        <option value="1300">ADIDAS YEEZY 350 V2 RM 1300</option>
+
+        <option value="90">Emergence Men's Running Shoes RM 90</option>
+        <option value="170">Suede Classic+ Trainers RM 170</option>
+        <option value="490">Mirage Sport Trainers RM 490</option>
+        <option value="730">LaMelo Ball x RS-X'Galaxy' RM 730</option>
+        <option value="500">Puma Suede '50th Anniversary' RM 500</option>
+        </select>
+    </div>
+           <!-- QUANTITY OF ORDER -->
+    <div class="product_infor">
+        Quantity: 
+        <select name="qty" onchange="order_price()">
+        <option>Quantity</option>  
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option> 
+        </select>
+    </div>
+        <div class="product_infor">
+            Date:
+                <input class="numbers" id="date"  name="formdate" size="10" disabled="disabled" />
+        </div>
+        
+            <div class="product_infor">
+                Shipping:
+                    <div class="shipping_option">
+                            <input type="radio" name="shipping" value="8.10" onclick="shipping_price()"/>
+                         Ninja: RM 8.10
+                            <input type="radio" name="shipping" value="10.10" onclick="shipping_price()"/>
+                         DHL: RM 10.10
+                         <br>
+                            <input type="radio" name="shipping" value="12.95" onclick="shipping_price()"/>
+                         Standard: RM 12.95
+                             <input type="radio" name="shipping" value="14.00" onclick="shipping_price()"/>
+                         On day: RM 14.00
+                    </div>
+            </div>
+            <div class="product_infor">
+                Shopping Fee: 
+                <input class="numbers" name="shippingtax" size="7" value="0.00" disabled>
+            </div>
+            <div class="product_infor">
+                Subtotal: 
+               <input class="numbers" name="subtotal1" size="7" value="0.00" disabled  />
+            </div>
+            <div class="product_infor">
+                Tax (8%):
+                <input class="numbers" name="percenttax" size="7" value="0.00" disabled/>
+            </div>
+            <div class="product_infor">
+                total:
+               <input class="numbers" name="total" size="7" value="0.00" disabled>
+            </div>
+
+    </div>
+
+    <div class="payment">
+
+    <h1>Payment</h1>
+    <div class="inputBox">
+        <label>We accept: </label>
+        <br>
+       <img src="payment.method.jpg" height="50px" width="300px"/>
+    </div>
+    <div class="inputBox">
+        <label for="cardnameBox">Name on card</label>
+        <input type="text" id="cardnameBox" placeholder="NAME" name="personal" required/> 
+    </div>
+
+        <div class="inputBox">
+            <label for="creditNumBox">Credit Card Number:</label>
+            <input type="text" id="creditNumBox" placeholder="0000-0000-0000-0000" name="creditcard" required/> 
+        </div>
+
+        <div class="inputBox">
+            <label for="monthBox">Exp Month:</label>
+            <select name="month">
+                <option value="0">Month</option>  
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option> 
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+        </div>
+
+        <div class="inputBox">
+            <label for="stateBox">Exp Year:</label>
+            <input type="text" id="stateBox" placeholder="202X"  required/> 
+        </div>
+
+        <div class="inputBox">
+            <label for="cvvBox">CVV/CVV2:</label>
+            <input type="text" id="cvvBox" placeholder="0/12"required/> 
+        </div>
+  
+            <input type="submit" value="Proceed Payment" id="submit_payment"/>
+
+        </div>
+    </form>
+
+</body>
+</html>
